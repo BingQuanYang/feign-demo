@@ -1,0 +1,32 @@
+server:
+  port: 8010
+  servlet:
+    context-path: /api
+
+
+spring:
+  application:
+    name: cloud-alibaba-feign-producer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.196.109.61:8848
+
+  datasource:
+    druid:
+      url: jdbc:mysql://121.196.109.61:3306/boot?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: root
+      max-active: 10
+
+
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+
+logging:
+  level:
+    cloud.alibaba.feign.producer.mapper: debug

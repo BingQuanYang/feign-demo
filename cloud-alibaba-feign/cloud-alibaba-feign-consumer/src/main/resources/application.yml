@@ -1,0 +1,17 @@
+server:
+  port: 8089
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: cloud-alibaba-feign-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.196.109.61:8848
+
+
+feign:
+  okhttp:
+    enabled: true
